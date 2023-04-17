@@ -1,0 +1,84 @@
+/* General styles for site */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Arial", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3em;
+    border-bottom: 1px solid black;
+}
+
+.header-left {
+    flex-grow: 3;
+}
+
+.header-right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    padding: 1em 1em 0 0;
+}
+
+.headshot-image {
+    height: 20em;
+    max-height: 500px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+article {
+    flex-grow: 3;
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+.subsection {
+    margin-bottom: 2em;
+}
+
+.subsubsection {
+    margin-bottom: 1em;
+}
+
+aside {
+    flex-grow: 1;
+    padding: 0 3em;
+    border-left: 1px solid black;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social-link img {
+    height: 2em;
+    transition: transform 1s ease-in-out;
+}
+
+.social-link p {
+    margin-left: 1em;
+}
+
+.social-link:hover img {
+    transform: rotate(720deg);
+}
+
+.subtitle, .subsection-subtitle {
+    font-style: italic;
+}
