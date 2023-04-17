@@ -1,84 +1,109 @@
 /* General styles for site */
+.social-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.social-link img {
+  height: 2em;
+  transition: transform 1s ease-in-out;
+}
+.social-link img:hover {
+  transform: rotate(720deg);
+}
+.social-link p {
+  margin-left: 1em;
+}
+
+.experience-logo-title {
+  display: flex;
+  flex-direction: row;
+}
+.experience-logo-title img {
+  max-height: 2em;
+}
+
+.education-logo-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.education-logo-title h3 {
+  margin-left: 1em;
+}
+.education-logo-title img {
+  max-height: 4em;
+}
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  margin: 1em 2em;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 3em;
-    border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 3em;
+  border-bottom: 1px solid black;
 }
 
 .header-left {
-    flex-grow: 3;
+  flex-grow: 3;
 }
 
 .header-right {
-    display: flex;
-    flex-grow: 1;
-    justify-content: end;
-    padding: 1em 1em 0 0;
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  padding: 1em 1em 0 0;
 }
 
 .headshot-image {
-    height: 20em;
-    max-height: 500px;
+  height: 20em;
+  max-height: 500px;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 article {
-    flex-grow: 3;
+  flex-grow: 3;
+  margin-right: 2em;
+}
+article section:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
 section {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
+  border-bottom: 1px black solid;
 }
 
 .subsection {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .subsubsection {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 aside {
-    flex-grow: 1;
-    padding: 0 3em;
-    border-left: 1px solid black;
-}
-
-.social-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.social-link img {
-    height: 2em;
-    transition: transform 1s ease-in-out;
-}
-
-.social-link p {
-    margin-left: 1em;
-}
-
-.social-link:hover img {
-    transform: rotate(720deg);
+  flex-grow: 1;
+  padding: 0 3em;
+  border-left: 1px solid black;
 }
 
 .subtitle, .subsection-subtitle {
-    font-style: italic;
+  font-style: italic;
 }
+
+/*# sourceMappingURL=styles.css.map */

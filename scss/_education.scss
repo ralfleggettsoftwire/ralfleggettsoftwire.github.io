@@ -1,0 +1,13 @@
+.education-logo-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h3 {
+    margin-left: 1em;
+  }
+
+  img {
+    max-height: 4em;
+  }
+}
