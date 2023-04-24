@@ -1,0 +1,11 @@
+#gif-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  img {
+    margin: 2em;
+  }
+}
