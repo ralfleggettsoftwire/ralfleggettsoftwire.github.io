@@ -8,16 +8,27 @@
     <body>
         <header>
             <div class="header-left">
-                <h1 class="title">
-                    Ralf Leggett
-                </h1>
-                <h3 class="subtitle">
-                    Graduate Software Developer at Softwire
-                </h3>
-                <p>
-                    This is a brief paragraph to summarise myself.
+                <div>
+                    <h1 class="title">
+                        Ralf Leggett
+                    </h1>
+                    <h3 class="subtitle">
+                        Graduate Software Developer at Softwire
+                    </h3>
+                </div>
+                <p class="tagline">
+                    Cambridge-based software developer, currently working on the Electoral Integrity
+                    Programme to develop the client-facing services for the register-to-vote and adjacent services
+                    for the government.
                 </p>
-                <iframe src="https://giphy.com/embed/g01ZnwAUvutuK8GIQn" width="480" height="270" class="giphy-embed" allowFullScreen></iframe>
+                <nav>
+                    <ul class="horizontal-list">
+                        <li><a href="#experience" aria-label="Jump to 'Experience' section">Experience</a></li>
+                        <li><a href="#education" aria-label="Jump to 'Education' section">Education</a></li>
+                        <li><a href="#hobbies" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
+                        <li><a href="#links" aria-label="Jump to 'Links' section">Links</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="header-right">
                 <img class="headshot-image" src="image/Ralf%20Leggett-5-half-size.jpg" alt="Headshot image of Ralf Leggett" />
@@ -26,15 +37,15 @@
         <main>
             <article>
                 <section>
-                    <h2 class="section-title">
+                    <h2 id="experience">
                         Experience
                     </h2>
                     <div class="subsection">
                         <div class="experience-logo-title">
-                            <img class="experience-logo" src="image/softwire-logo.svg" alt="Softwire company logo" />
+                            <img class="experience-logo" src="image/softwire-logo.svg" alt="Softwire" />
                         </div>
                         <h4 class="subsection-subtitle">
-                            Graduate Software Developer, Sept '23 - Present
+                            Graduate Software Developer, September '22 - Present
                         </h4>
                         <div class="subsubsection">
                             <h4 class="subsubsection-title">
@@ -43,7 +54,7 @@
                             <p>
                                 Working on the Register to Vote and Voter Authority Certificate services and expanding
                                 to allow for online postal and proxy vote applications with support for no Javascript.
-                                Working in Javascript, Scala, and Terraform.
+                                Working in Javascript, Java, Scala, and Terraform.
                             </p>
                         </div>
                         <div class="subsubsection">
@@ -57,28 +68,28 @@
                     </div>
                     <div class="subsection">
                         <div class="experience-logo-title">
-                            <img src="image/bae-systems-logo.svg" alt="Softwire company logo" />
+                            <img src="image/bae-systems-logo.svg" alt="BAE Systems" />
                         </div>
                         <h4 class="subsection-subtitle">
-                            Summer Intern, June '22 - Sept '22
+                            Summer Intern, June '21 - September '21
                         </h4>
                         <p>
-                            Wrote a bespoke data visualisation tool for an experimental high-altitude solar-powered
-                            drone that used multiprocessing to process data from multiple sensors recording measurements
-                            over a 30+ day flights at x Hz. Used multiprocessing to reduce the parse and data
-                            compilation time for the several gigabyte files to under 10 seconds.
+                            Wrote a bespoke data visualisation tool to parse, process and display binary data gathered
+                            by an experimental high-altitude solar-powered drone with multiple sensors recording
+                            measurements over 30+ day flights multiple times a second. Used multiprocessing to reduce
+                            the parse and data compilation time for the several gigabyte files to under 10 seconds.
                         </p>
                     </div>
                 </section>
                 <section>
-                    <h2 class="section-title">
+                    <h2 id="education">
                         Education
                     </h2>
                     <div class=" subsection">
                         <div class="education-logo-title">
                             <img src="image/warwick-crest.jpg" alt="University of Warwick crest" />
                             <h3 class="subsection-title">
-                                University of Warwick
+                                University of Warwick, October '18 - July '22
                             </h3>
                         </div>
                         <h4 class="subsection-subtitle">
@@ -92,17 +103,19 @@
                                 Led a team of 6 on an investigation over the course of the year into the utility of a
                                 variety of multi-agent reinforcement learning algorithms in the field of search and
                                 rescue. We developed a custom sandbox environment to model potential scenarios at a high
-                                level and worked with RLlib -- a scalable deep reinforcement learning library -- to
+                                level and worked with RLlib — a scalable deep reinforcement learning library — to
                                 trial a variety of disaster scenarios, using heterogeneous agent types with different
                                 abilities. We concluded that there is potential for these algorithms to guide agents at
-                                a high level on the tasks to carry out -- exploration, search, rescue or recovery -- but
+                                a high level on the tasks to carry out — exploration, search, rescue or recovery — but
                                 that control at a micro level will still likely require human intervention at a minimum.
                             </p>
                         </div>
                         <div class="subsubsection">
                             <h4>Dissertation: Trajectory Planning for Autonomous Racecars</h4>
                             <p>
-                                A brief description of what I did and found out
+                                Working with a small-scale wheeled robot, I used computer vision to detect the driveable
+                                surface, plan a trajectory and follow it. Due to issues with setting up a binocular
+                                vision system, I used monocular vision with planar transformations to carry this out.
                             </p>
                         </div>
                         <div class="subsubsection">
@@ -132,7 +145,7 @@
                                 I helped out the other officers with planning and running events, as well as with
                                 seeking new sponsorships to grow our budget. The year ended with our most extravagant
                                 event, the ABACUS ball, which took place in a country house hotel for dinner and drinks
-                                with live performances, a dancefloor and a fireworks show to end the night
+                                with live performances, a dancefloor and a fireworks show to end the night.
                                 </p>
                             </div>
                             <div>
@@ -156,7 +169,7 @@
                         <div class="education-logo-title">
                             <img src="image/winchester-crest.png" alt="Winchester College crest" />
                             <h3 class="subsection-title">
-                                Winchester College
+                                Winchester College, September '13 - July '18
                             </h3>
                         </div>
                         <h4 class="subsection-subtitle">
@@ -167,10 +180,10 @@
                                 Pre-Us (A-level Equivalent)
                             </h4>
                             <ul>
-                                <li>Maths</li>
-                                <li>Further Maths</li>
-                                <li>Physics</li>
-                                <li>Economics</li>
+                                <li>Maths (D1/A*)</li>
+                                <li>Further Maths (D2/A*)</li>
+                                <li>Physics (D1/A*)</li>
+                                <li>Economics (D1/A*)</li>
                             </ul>
                         </div>
                         <div class="subsubsection">
@@ -178,41 +191,79 @@
                                 Activities
                             </h4>
                             <p>
-                                Some activities I did
+                                Expedition society, prefect, front-desk cellist in Symphony Orchestra, football,
+                                community volunteering.
                             </p>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <h2>
+                    <h2 id="hobbies">
                         Hobbies
                     </h2>
                     <div class="subsection">
                         <ul>
-                            <li><strong>Games:</strong> Valorant, Civ 6</li>
-                            <li><strong>Walks:</strong> RSPB member</li>
+                            <li><strong>Games:</strong> Valorant, Civ 6, other turn-based strategy</li>
+                            <li><strong>Walks:</strong> RSPB member, enjoy visiting their reserves</li>
                             <li><strong>Music:</strong> Cello, Piano</li>
-                            <li><strong>Football:</strong> Ipswich Town supporter</li>
+                            <li><strong>Football:</strong> Ipswich Town supporter, 5-a-side</li>
+                            <li><strong>Cars and Motorsport:</strong> Le Mans '23, Goodwood FoS '22, '23, Evo Magazine</li>
                         </ul>
+                        <p>
+                            Nascent hobbies include cycling, swimming and various craft activities, with cross-stitching
+                            being one that I have particularly enjoyed recently.
+                        </p>
+                        <p>
+                            Hobbies I'd like to find time to revitalise include astronomy and LEGO.
+                        </p>
                     </div>
                 </section>
             </article>
             <aside>
                 <div class="subsection">
-                    <h4 class="aside-title">
+                    <h4 class="aside-title" id="links">
                         Links
                     </h4>
-                    <a href="https://uk.linkedin.com/in/ralf-leggett" target="_blank" referrerpolicy="no-referrer">
-                        <div class="social-link">
-                            <img class="social-logo" src="image/linkedin.png" alt="LinkedIn logo" />
-                            <p>LinkedIn</p>
-                        </div>
+                    <a
+                        class="social-link"
+                        href="https://uk.linkedin.com/in/ralf-leggett"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        aria-label="LinkedIn profile, opens in new tab"
+                    >
+                        <img class="social-logo" src="image/linkedin.png" alt="LinkedIn logo" />
+                        <p>LinkedIn</p>
+                    </a>
+                    <a
+                            class="social-link"
+                            href="https://github.com/ralfleggettsoftwire"
+                            target="_blank"
+                            referrerpolicy="no-referrer"
+                            aria-label="GitHub profile, opens in new tab"
+                    >
+                        <img class="social-logo" src="image/github.svg" alt="GitHub logo" />
+                        <p>GitHub</p>
+                    </a>
+                    <a
+                        class="social-link"
+                        href="https://twitter.com/RalfLeggett"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        aria-label="Twitter profile, opens in new tab"
+                    >
+                        <img class="social-logo" src="image/twitter.svg" alt="Twitter logo" />
+                        <p>Twitter</p>
                     </a>
                 </div>
                 <div class="subsection">
                     <h4 class="aside-title">
                         Languages, Technologies
                     </h4>
+                    <p>
+                        Work and University has given me exposure to languages of all levels and paradigms. I'm
+                        confident in my ability to pick new ones up, as I have done many times before. The following
+                        are the ones I am most familiar with, or that I am using currently:
+                    </p>
                     <ul>
                         <li>Javascript, React</li>
                         <li>Python</li>
@@ -228,9 +279,17 @@
                     </h4>
                     <ul>
                         <li>Image processing</li>
-                        <li>ML</li>
+                        <li>ML, including its wide-ranging ethical implications</li>
                         <li>Robotics, driverless cars</li>
                     </ul>
+                </div>
+                <div class="subsection">
+                    <h4>
+                        Contact
+                    </h4>
+                    <p>
+                        Please contact me through LinkedIn DMs
+                    </p>
                 </div>
             </aside>
         </main>
