@@ -35,17 +35,6 @@
   max-height: 4em;
 }
 
-#gif-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-#gif-container img {
-  margin: 2em;
-}
-
 body {
   display: flex;
   flex-direction: column;
