@@ -4,11 +4,71 @@
 @import 'education';
 @import 'trending';
 
+$phone-bp: 640px;
+$tablet-bp: 768px;
+$desktop-bp: 1024px;
+
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: "Arial", sans-serif;
-    margin: 1em 2em;
+    margin: 0;
+    padding: 1em;
+    overflow-x: hidden;
+}
+
+header, main {
+    width: 100%;
+    max-width: 1024px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: "Courier New", sans-serif;
+}
+
+// Top-level element media-queries
+@media (min-width: $tablet-bp) {
+    main {
+        flex-direction: row;
+    }
+
+    article {
+        margin-right: 2em;
+    }
+
+    aside {
+        flex-grow: 1;
+        padding: 0 2em;
+        border-left: 1px solid black;
+    }
+
+    // Courier New looks a bit small, so up each header's size by a class; tablet+ only as it's a bit much on mobile
+    h1.title {
+        font-size: 3em;
+    }
+    h2.title {
+        font-size: 2em;
+    }
+    h3.title {
+        font-size: 1.5em;
+    }
+    h4.title {
+        font-size: 1.17em;
+    }
+    h5.title {
+        font-size: 1em;
+    }
+}
+
+
+.subtitle {
+    font-style: italic;
 }
 
 a {
@@ -17,98 +77,231 @@ a {
 
 header {
     display: flex;
-    flex-direction: row;
-    padding-bottom: 3em;
-    border-bottom: 1px solid black;
-}
-
-.header-left {
-    flex-grow: 3;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 2em;
+    border-bottom: 1px solid black;
+
+    #header-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1em;
+    }
+
+    .header-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #headshot-image {
+        display: none;
+    }
+
+    @media (min-width: $tablet-bp) {
+        #header-content {
+            flex-direction: row;
+            justify-content: start;
+        }
+
+        .header-left {
+            flex-grow: 5;
+            align-items: start;
+        }
+
+        .header-right {
+            flex-grow: 1;
+            margin-left: 3em;
+        }
+
+        #headshot-image {
+            display: block;
+            height: 15em;
+            width: 15em;
+            max-height: 300px;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+    }
+
+    #tagline {
+        font-size: 1.2em;
+        font-style: italic;
+    }
 }
 
-.header-right {
-    display: flex;
-    flex-grow: 1;
-    justify-content: end;
-    padding: 1em 1em 0 0;
-}
+// Currently not working as we're setting some styles with Javascript. Commenting this out should mean no navbar on
+// mobile
+//@media(max-width: $tablet-bp) {
+//    #nav-button {
+//        height: 2em;
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+//        z-index: 5;
+//        cursor: pointer;
+//        user-select: none;
+//
+//        span {
+//            height: 4px;
+//            width: 35px;
+//            border-radius: 2px;
+//            background-color: darkslategray;
+//            position: relative;
+//            display: block;
+//            transition: all .2s ease-in-out;
+//
+//            &:before {
+//                top: -10px;
+//                visibility: visible;
+//            }
+//
+//            &:after {
+//                top: 10px;
+//            }
+//
+//            &:before, &:after {
+//                height: 4px;
+//                width: 35px;
+//                border-radius: 2px;
+//                background-color: darkslategray;
+//                position: absolute;
+//                content: "";
+//                transition: all .2s ease-in-out;
+//            }
+//        }
+//
+//        &:hover span, &:hover span:before, &:hover span:after {
+//            background: black;
+//        }
+//    }
+//}
 
-.headshot-image {
-    height: 20em;
-    max-height: 500px;
-}
+input[type=checkbox] {
+    display: none;
 
-.tagline {
-    font-size: 1.25em;
-    font-style: italic;
-}
-
-.horizontal-list {
-    list-style: none;
-
-    li {
-        display: inline-block;
-        min-width: 15em;
-
-        :not(:last-child) {
-            border-right: 1px solid black;
-            margin-right: 1em;
+    &:checked ~ #nav-button {
+        &:hover span, span {
+            background: transparent;
+        }
+        span {
+            &:before {
+                transform: rotate(45deg) translate(7px, 7px);
+                opacity: 1;
+            }
+            &:after {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
         }
     }
 }
 
 nav {
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: #3AE1FF;
+    color: white;
+    z-index: 2;
+    visibility: hidden;
+    position: fixed;
+
+    &.active {
+        visibility: visible;
+    }
 
     ul {
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 1em;
+        text-align: center;
+
+        a {
+            color: darkslategray;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    @media (min-width: $tablet-bp) {
+        ul {
+            height: auto;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: unset;
+        }
 
         li {
-            font-weight: bold;
+            display: inline-block;
+            min-width: 10em;    // width of longest link; slight risk of pushing content off the page
+            font-size: 1em;
+            padding: 0;
+
+            :not(:last-child) {
+                border-right: 1px solid black;
+                margin-right: 1em;
+            }
+
+            a {
+                color: black;
+            }
         }
     }
 }
 
-main {
-    display: flex;
-    flex-direction: row;
+@media (min-width: $tablet-bp) {
+    nav {
+        height: auto;
+        width: 100%;
+        max-width: 1024px;
+        padding-bottom: 1em;
+        order: 3;
+        background: white;
+        visibility: visible;
+        position: relative;
+    }
 }
 
 article {
     flex-grow: 5;
-    margin-right: 2em;
+
+    section {
+        margin-bottom: 3em;
+        border-bottom: 1px black solid;
+    }
 
     section:last-child {
         margin-bottom: 0;
         border-bottom: none;
     }
-}
 
-section {
-    margin-bottom: 3em;
-    border-bottom: 1px black solid;
-}
+    .subsection {
+        margin-bottom: 2em;
+    }
 
-.subsection {
-    margin-bottom: 2em;
-}
-
-.subsubsection {
-    margin-bottom: 1em;
-}
-
-aside {
-    flex-grow: 1;
-    padding: 0 3em;
-    border-left: 1px solid black;
-}
-
-.subtitle, .subsection-subtitle {
-    font-style: italic;
+    .subsubsection {
+        margin-bottom: 1em;
+    }
 }

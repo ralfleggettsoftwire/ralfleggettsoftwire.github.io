@@ -2,63 +2,75 @@
 <html lang="en">
     <head>
         <title>Ralf Leggett</title>
-        <script src="js/giphy.js"></script>
         <link rel="stylesheet" href="css/styles.css"/>
+        <script src="js/index.js"></script>
+        <meta name="author" content="Ralf Leggett">
+        <meta name="description" content="Ralf Leggett's Site">
+        <meta name="keywords" content="Ralf, Leggett, Ralf Leggett, Developer, Softwire">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <header>
-            <div class="header-left">
-                <div>
-                    <h1 class="title">
-                        Ralf Leggett
-                    </h1>
+    <body onresize="onResize()">
+        <header role="banner">
+            <section id="header-title">
+                <h1 class="title">
+                    Ralf Leggett
+                </h1>
+                <input type="checkbox" id="nav-button-input" onclick="toggleNavbarVisibility()" />
+                <label for="nav-button-input" id="nav-button"><span></span></label>
+            </section>
+            <nav id="nav" role="navigation">
+                <ul tabindex="-1" aria-label="main navigation">
+                    <li><a href="#experience" aria-label="Jump to 'Experience' section">Experience</a></li>
+                    <li><a href="#education" aria-label="Jump to 'Education' section">Education</a></li>
+                    <li><a href="#hobbies" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
+                    <li><a href="#links" aria-label="Jump to 'Links' section">Links</a></li>
+                </ul>
+            </nav>
+            <section id="header-content">
+                <div class="header-left">
                     <h3 class="subtitle">
                         Graduate Software Developer at Softwire
                     </h3>
+                    <p id="tagline">
+                        Cambridge-based software developer, currently working on the Electoral Integrity
+                        Programme to develop the client-facing side of the register-to-vote and adjacent services
+                        for the government.
+                    </p>
                 </div>
-                <p class="tagline">
-                    Cambridge-based software developer, currently working on the Electoral Integrity
-                    Programme to develop the client-facing services for the register-to-vote and adjacent services
-                    for the government.
-                </p>
-                <nav>
-                    <ul class="horizontal-list">
-                        <li><a href="#experience" aria-label="Jump to 'Experience' section">Experience</a></li>
-                        <li><a href="#education" aria-label="Jump to 'Education' section">Education</a></li>
-                        <li><a href="#hobbies" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
-                        <li><a href="#links" aria-label="Jump to 'Links' section">Links</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header-right">
-                <img class="headshot-image" src="image/Ralf%20Leggett-5-half-size.jpg" alt="Headshot image of Ralf Leggett" />
-            </div>
+                <img
+                        id="headshot-image"
+                        class="header-right"
+                        src="image/Ralf%20Leggett-5-half-size.jpg"
+                        alt="Headshot image of Ralf Leggett"
+                />
+            </section>
         </header>
-        <main>
+        <main role="main">
             <article>
                 <section>
-                    <h2 id="experience">
+                    <h2 id="experience" class="title">
                         Experience
                     </h2>
                     <div class="subsection">
                         <div class="experience-logo-title">
                             <img class="experience-logo" src="image/softwire-logo.svg" alt="Softwire" />
                         </div>
-                        <h4 class="subsection-subtitle">
-                            Graduate Software Developer, September '22 - Present
+                        <h4 class="subtitle">
+                            Graduate Software Developer, Sept '22 - Present
                         </h4>
                         <div class="subsubsection">
-                            <h4 class="subsubsection-title">
-                                Electoral Integrity Program Frontend (Current)
+                            <h4 class="title">
+                                EIP Frontend (Current)
                             </h4>
                             <p>
-                                Working on the Register to Vote and Voter Authority Certificate services and expanding
-                                to allow for online postal and proxy vote applications with support for no Javascript.
-                                Working in Javascript, Java, Scala, and Terraform.
+                                Part of the Electoral Integrity Program (EIP) working on the Register to Vote and Voter
+                                Authority Certificate services. Currently expanding to allow for online postal and proxy
+                                vote applications with support for no Javascript. Using Javascript, Java, Scala and
+                                Terraform.
                             </p>
                         </div>
                         <div class="subsubsection">
-                            <h4 class="subsubsection-title">
+                            <h4 class="title">
                                 COMPOR
                             </h4>
                             <p>
@@ -70,8 +82,8 @@
                         <div class="experience-logo-title">
                             <img src="image/bae-systems-logo.svg" alt="BAE Systems" />
                         </div>
-                        <h4 class="subsection-subtitle">
-                            Summer Intern, June '21 - September '21
+                        <h4 class="subtitle">
+                            Summer Intern, June '21 - Sept '21
                         </h4>
                         <p>
                             Wrote a bespoke data visualisation tool to parse, process and display binary data gathered
@@ -82,23 +94,22 @@
                     </div>
                 </section>
                 <section>
-                    <h2 id="education">
+                    <h2 id="education" class="title">
                         Education
                     </h2>
                     <div class=" subsection">
                         <div class="education-logo-title">
                             <img src="image/warwick-crest.jpg" alt="University of Warwick crest" />
-                            <h3 class="subsection-title">
-                                University of Warwick, October '18 - July '22
+                            <h3 class="title">
+                                University of Warwick
                             </h3>
                         </div>
-                        <h4 class="subsection-subtitle">
-                            Computer Science MEng (1st)
+                        <h4 class="subtitle">
+                            Computer Science MEng (1st), Oct '18 - July '22
                         </h4>
                         <div class="subsubsection">
-                            <h4 class="subsubsection-title">
-                                Masters Dissertation: Multi-Agent Reinforcement Learning for Search and Rescue
-                            </h4>
+                            <h4 class="title">Masters Dissertation</h4>
+                            <h4 class="subtitle">Multi-Agent Reinforcement Learning for Search and Rescue</h4>
                             <p>
                                 Led a team of 6 on an investigation over the course of the year into the utility of a
                                 variety of multi-agent reinforcement learning algorithms in the field of search and
@@ -111,7 +122,8 @@
                             </p>
                         </div>
                         <div class="subsubsection">
-                            <h4>Dissertation: Trajectory Planning for Autonomous Racecars</h4>
+                            <h4 class="title">Dissertation</h4>
+                            <h4 class="subtitle">Trajectory Planning for Autonomous Racecars</h4>
                             <p>
                                 Working with a small-scale wheeled robot, I used computer vision to detect the driveable
                                 surface, plan a trajectory and follow it. Due to issues with setting up a binocular
@@ -119,7 +131,10 @@
                             </p>
                         </div>
                         <div class="subsubsection">
-                            <h4>Modules include:</h4>
+                            <h4 class="title">
+                                Modules
+                            </h4>
+                            Including:
                             <ul>
                                 <li>Image Processing</li>
                                 <li>Machine Learning, Neural Networks, Data Science & Analytics</li>
@@ -131,11 +146,11 @@
                             </ul>
                         </div>
                         <div class="subsubsection">
-                            <h4 class="subsubsection-title">
+                            <h4 class="title">
                                 Activities
                             </h4>
                             <div>
-                                <h5>Vice President and Welfare Officer of Warwick ABACUS:</h5>
+                                <h5 class="subtitle">Vice President & Welfare Officer, Warwick ABACUS</h5>
                                 <p>
                                 Warwick ABACUS (Association of British and Chinese University Students) is an inclusive
                                 society that aims to bring together the often disparate British and Chinese university
@@ -149,7 +164,7 @@
                                 </p>
                             </div>
                             <div>
-                                <h5>CS:GO Community Officer of Warwick Esports:</h5>
+                                <h5 class="subtitle">CS:GO Community Officer, Warwick Esports</h5>
                                 <p>
                                 I managed the various CS:GO teams competing for Warwick in the two university leagues
                                 and helped run events, including a tournament that saw teams from several European
@@ -168,17 +183,18 @@
                     <div class="subsection">
                         <div class="education-logo-title">
                             <img src="image/winchester-crest.png" alt="Winchester College crest" />
-                            <h3 class="subsection-title">
-                                Winchester College, September '13 - July '18
+                            <h3 class="title">
+                                Winchester College
                             </h3>
                         </div>
-                        <h4 class="subsection-subtitle">
-                            Academic Scholarship, Music Exhibition
+                        <h4 class="subtitle">
+                            Academic Scholarship & Music Exhibition, Sept '13 - July '18
                         </h4>
                         <div class="subsubsection">
-                            <h4>
-                                Pre-Us (A-level Equivalent)
+                            <h4 class="title">
+                                Pre-Us
                             </h4>
+                            A-level equivalent exams
                             <ul>
                                 <li>Maths (D1/A*)</li>
                                 <li>Further Maths (D2/A*)</li>
@@ -187,7 +203,7 @@
                             </ul>
                         </div>
                         <div class="subsubsection">
-                            <h4 class="subsubsection-title">
+                            <h4 class="title">
                                 Activities
                             </h4>
                             <p>
@@ -198,16 +214,16 @@
                     </div>
                 </section>
                 <section>
-                    <h2 id="hobbies">
+                    <h2 id="hobbies" class="title">
                         Hobbies
                     </h2>
                     <div class="subsection">
                         <ul>
-                            <li><strong>Games:</strong> Valorant, Civ 6, other turn-based strategy</li>
+                            <li><strong>Games:</strong> Age of Wonders 4, Valorant, Civ 6, CS:GO</li>
                             <li><strong>Walks:</strong> RSPB member, enjoy visiting their reserves</li>
                             <li><strong>Music:</strong> Cello, Piano</li>
-                            <li><strong>Football:</strong> Ipswich Town supporter, 5-a-side</li>
-                            <li><strong>Cars and Motorsport:</strong> Le Mans '23, Goodwood FoS '22, '23, Evo Magazine</li>
+                            <li><strong>Football:</strong> Ipswich Town season ticket holder, 5-a-side</li>
+                            <li><strong>Cars and Motorsport:</strong> Le Mans '23; Goodwood FoS '22, '23; Evo Magazine</li>
                         </ul>
                         <p>
                             Nascent hobbies include cycling, swimming and various craft activities, with cross-stitching
@@ -221,15 +237,15 @@
             </article>
             <aside>
                 <div class="subsection">
-                    <h4 class="aside-title" id="links">
+                    <h3 class="title" id="links">
                         Links
-                    </h4>
+                    </h3>
                     <a
-                        class="social-link"
-                        href="https://uk.linkedin.com/in/ralf-leggett"
-                        target="_blank"
-                        referrerpolicy="no-referrer"
-                        aria-label="LinkedIn profile, opens in new tab"
+                            class="social-link"
+                            href="https://uk.linkedin.com/in/ralf-leggett"
+                            target="_blank"
+                            referrerpolicy="no-referrer"
+                            aria-label="LinkedIn profile, opens in new tab"
                     >
                         <img class="social-logo" src="image/linkedin.png" alt="LinkedIn logo" />
                         <p>LinkedIn</p>
@@ -245,22 +261,22 @@
                         <p>GitHub</p>
                     </a>
                     <a
-                        class="social-link"
-                        href="https://twitter.com/RalfLeggett"
-                        target="_blank"
-                        referrerpolicy="no-referrer"
-                        aria-label="Twitter profile, opens in new tab"
+                            class="social-link"
+                            href="https://twitter.com/RalfLeggett"
+                            target="_blank"
+                            referrerpolicy="no-referrer"
+                            aria-label="Twitter profile, opens in new tab"
                     >
                         <img class="social-logo" src="image/twitter.svg" alt="Twitter logo" />
                         <p>Twitter</p>
                     </a>
                 </div>
                 <div class="subsection">
-                    <h4 class="aside-title">
+                    <h3 class="title">
                         Languages, Technologies
-                    </h4>
+                    </h3>
                     <p>
-                        Work and University has given me exposure to languages of all levels and paradigms. I'm
+                        Work and University have given me exposure to languages of all levels and paradigms. I'm
                         confident in my ability to pick new ones up, as I have done many times before. The following
                         are the ones I am most familiar with, or that I am using currently:
                     </p>
@@ -274,9 +290,9 @@
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h4 class="aside-title">
+                    <h3 class="title">
                         Technical Interests
-                    </h4>
+                    </h3>
                     <ul>
                         <li>Image processing</li>
                         <li>ML, including its wide-ranging ethical implications</li>
@@ -284,9 +300,9 @@
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h4>
+                    <h3 class="title">
                         Contact
-                    </h4>
+                    </h3>
                     <p>
                         Please contact me through LinkedIn DMs
                     </p>
