@@ -7,6 +7,5 @@ Mix of CV and training exercises.
 `sass [--watch] ./scss/styles.scss:./css/styles.css`
 
 ## TODOs
-* Fix mobile navbar
 * Add image of myself on mobile
 * Link hover effect

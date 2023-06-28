@@ -9,21 +9,24 @@
         <meta name="keywords" content="Ralf, Leggett, Ralf Leggett, Developer, Softwire">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body onresize="onResize()">
+    <body onload="onLoad()" onresize="onResize()">
+        <section id="mobile-title">
+            <a href="https://ralfleggett.co.uk">
+                <h1 class="title">Ralf Leggett</h1>
+            </a>
+            <input type="checkbox" id="nav-button-input" onclick="toggleNavbarVisibility()" />
+            <label for="nav-button-input" id="nav-button"><span></span></label>
+        </section>
         <header role="banner">
             <section id="header-title">
-                <h1 class="title">
-                    Ralf Leggett
-                </h1>
-                <input type="checkbox" id="nav-button-input" onclick="toggleNavbarVisibility()" />
-                <label for="nav-button-input" id="nav-button"><span></span></label>
+                <h1 class="title">Ralf Leggett</h1>
             </section>
             <nav id="nav" role="navigation">
                 <ul tabindex="-1" aria-label="main navigation">
-                    <li><a href="#experience" aria-label="Jump to 'Experience' section">Experience</a></li>
-                    <li><a href="#education" aria-label="Jump to 'Education' section">Education</a></li>
-                    <li><a href="#hobbies" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
-                    <li><a href="#links" aria-label="Jump to 'Links' section">Links</a></li>
+                    <li><a href="#experience" onclick="onLinkClick()" aria-label="Jump to 'Experience' section">Experience</a></li>
+                    <li><a href="#education" onclick="onLinkClick()" aria-label="Jump to 'Education' section">Education</a></li>
+                    <li><a href="#hobbies" onclick="onLinkClick()" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
+                    <li><a href="#links" onclick="onLinkClick()" aria-label="Jump to 'Links' section">Links</a></li>
                 </ul>
             </nav>
             <section id="header-content">
