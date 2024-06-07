@@ -1,331 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Ralf Leggett</title>
-        <link rel="icon" type="image/x-icon" href="image/favicon.png">
-        <link rel="stylesheet" href="css/styles.css"/>
-        <script src="js/index.js"></script>
-        <meta name="author" content="Ralf Leggett">
-        <meta name="description" content="Ralf Leggett's Site">
-        <meta name="keywords" content="Ralf, Leggett, Ralf Leggett, Developer, Softwire">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body onload="onLoad()" onresize="onResize()">
-        <section id="mobile-title">
-            <a href="https://ralfleggett.co.uk">
-                <h1 class="title">Ralf Leggett</h1>
-            </a>
-            <input type="checkbox" id="nav-button-input" onclick="toggleNavbarVisibility()" />
-            <label for="nav-button-input" id="nav-button"><span></span></label>
+<head>
+    <title>Ralf Leggett</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.png">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/index.js"></script>
+    <meta name="author" content="Ralf Leggett">
+    <meta name="description" content="Ralf Leggett's Site">
+    <meta name="keywords" content="Ralf, Leggett, Ralf Leggett, Developer, Softwire">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="onLoad()" onresize="onResize()">
+<section id="mobile-title">
+    <a href="https://ralfleggett.co.uk">
+        <h1 class="title">Ralf Leggett</h1>
+    </a>
+    <input type="checkbox" id="nav-button-input" onclick="toggleNavbarVisibility()"/>
+    <label for="nav-button-input" id="nav-button"><span></span></label>
+</section>
+<header role="banner">
+    <section id="header-title">
+        <h1 class="title">Ralf Leggett</h1>
+    </section>
+    <nav id="nav" role="navigation">
+        <ul tabindex="-1" aria-label="main navigation">
+            <li><a href="#experience" onclick="onLinkClick()" aria-label="Jump to 'Experience' section">Experience</a>
+            </li>
+            <li><a href="#education" onclick="onLinkClick()" aria-label="Jump to 'Education' section">Education</a></li>
+            <li><a href="#hobbies" onclick="onLinkClick()" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
+            <li><a href="#links" onclick="onLinkClick()" aria-label="Jump to 'Links' section">Links</a></li>
+        </ul>
+    </nav>
+    <section id="header-content">
+        <div class="header-left">
+            <h3 class="subtitle">
+                Software Developer at Softwire
+            </h3>
+            <p id="tagline">
+                Cambridge-based full-stack software engineer, currently working on the Electoral Integrity
+                Programme to develop the back-office side of the register-to-vote and adjacent services
+                for the government.
+            </p>
+        </div>
+        <img
+                id="headshot-image"
+                class="header-right"
+                src="image/Ralf%20Leggett-5-half-size.jpg"
+                alt="Headshot image of Ralf Leggett"
+        />
+    </section>
+</header>
+<main role="main">
+    <article>
+        <section>
+            <h2 id="experience" class="title">
+                Experience
+            </h2>
+            <div class="subsection">
+                <div class="experience-logo-title">
+                    <img class="experience-logo" src="image/softwire-logo.svg" alt="Softwire"/>
+                </div>
+                <h4 class="subtitle">
+                    Software Developer, July '23 - Present
+                </h4>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        EIP ERO Portal, July '23 - Present
+                    </h4>
+                    <p>
+                        Worked on back-office application to process applications for postal and proxy votes.
+                        Highlights includes:
+                    </p>
+                    <ul class="wordy-list">
+                        <li>
+                            Ownership of complex feature from initial design through implementation and demos to the
+                            client. Worked with designers and produced high-quality implementation that has been
+                            bug-free since release.
+                        </li>
+                        <li>
+                            Led several knowledge-sharing sessions on topics across our tech stack; supported
+                            new starters in the team.
+                        </li>
+                        <li>
+                            Brought in close to deadlines to get features finished on several occasions while balancing
+                            the priorities of my own work-streams.
+                        </li>
+                    </ul>
+                    <pre>Kotlin, Typescript, React, Terraform, MySQL, AWS</pre>
+                </div>
+                <h4 class="subtitle">
+                    Graduate Software Developer, Sept '22 - July '23
+                </h4>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        EIP Citizen-Facing Services, Feb '23 - July '23
+                    </h4>
+                    <p>
+                        Worked on citizen-facing websites for postal and proxy votes, as well as various
+                        adjacent services. Highlights include:
+                    </p>
+                    <ul class="wordy-list">
+                        <li>
+                            Converted critical set of AWS lambdas to Typescript, identifying and fixing
+                            long-standing errors in the process.
+                        </li>
+                        <li>
+                            Investigated and implemented solution to limitation with existing approach to
+                            storing form values. Ensured approach is robust to future changes.
+                        </li>
+                        <li>
+                            High impact team-member, noted by managers for finding tricky bugs, identifying
+                            design inconsistencies or improvements and for being able to pick up new
+                            technologies quickly.
+                        </li>
+                    </ul>
+                    <pre>Javascript, Java, Scala, Terraform, AWS</pre>
+                </div>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        Training & internal apps, Sept '22 - Feb '23
+                    </h4>
+                    <p>Worked on various projects during training including:</p>
+                    <ul class="wordy-list">
+                        <li>An HR tool tailored towards Romanian companies.</li>
+                        <li>
+                            Scripts to export our hiring database into a format accepted by a new third party tool.
+                        </li>
+                        <li>An app to help learn employees' names.</li>
+                    </ul>
+                    <pre>React, Python, Ruby</pre>
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="experience-logo-title">
+                    <img src="image/bae-systems-logo.svg" alt="BAE Systems"/>
+                </div>
+                <h4 class="subtitle">
+                    Software Engineering Intern, June '21 - Sept '21
+                </h4>
+                <p>
+                    Wrote a bespoke data visualisation tool to parse, process and display binary data gathered
+                    by an experimental high-altitude solar-powered drone with multiple sensors recording
+                    measurements over 30+ day flights multiple times a second. Used multiprocessing to reduce
+                    the parse and process time for the several gigabyte files to under 10 seconds.
+                </p>
+                <pre>Java</pre>
+            </div>
         </section>
-        <header role="banner">
-            <section id="header-title">
-                <h1 class="title">Ralf Leggett</h1>
-            </section>
-            <nav id="nav" role="navigation">
-                <ul tabindex="-1" aria-label="main navigation">
-                    <li><a href="#experience" onclick="onLinkClick()" aria-label="Jump to 'Experience' section">Experience</a></li>
-                    <li><a href="#education" onclick="onLinkClick()" aria-label="Jump to 'Education' section">Education</a></li>
-                    <li><a href="#hobbies" onclick="onLinkClick()" aria-label="Jump to 'Hobbies' section">Hobbies</a></li>
-                    <li><a href="#links" onclick="onLinkClick()" aria-label="Jump to 'Links' section">Links</a></li>
+        <section>
+            <h2 id="education" class="title">
+                Education
+            </h2>
+            <div class=" subsection">
+                <div class="education-logo-title">
+                    <img src="image/warwick-crest.jpg" alt="University of Warwick crest"/>
+                    <h3 class="title">
+                        University of Warwick
+                    </h3>
+                </div>
+                <h4 class="subtitle">
+                    Computer Science MEng (1st), Oct '18 - July '22
+                </h4>
+                <div class="subsubsection">
+                    <h4 class="title">Masters Dissertation</h4>
+                    <h4 class="subtitle">Multi-Agent Reinforcement Learning for Search and Rescue</h4>
+                    <p>
+                        Led a team of 6 on an investigation over the course of the year into the utility of a
+                        variety of multi-agent reinforcement learning algorithms in the field of search and
+                        rescue. We developed a custom sandbox environment to model potential scenarios at a high
+                        level and worked with RLlib — a scalable deep reinforcement learning library — to
+                        trial a variety of disaster scenarios, using heterogeneous agent types with different
+                        abilities. We concluded that there is potential for these algorithms to guide agents at
+                        a high level on the tasks to carry out — exploration, search, rescue or recovery — but
+                        that control at a micro level will still likely require human intervention at a minimum.
+                    </p>
+                </div>
+                <div class="subsubsection">
+                    <h4 class="title">Dissertation</h4>
+                    <h4 class="subtitle">Trajectory Planning for Autonomous Racecars</h4>
+                    <p>
+                        Working with a small-scale wheeled robot, I used computer vision to detect the driveable
+                        surface, plan a trajectory and follow it. Due to issues with setting up a binocular
+                        vision system, I used monocular vision with planar transformations to carry this out.
+                    </p>
+                </div>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        Modules
+                    </h4>
+                    Including:
+                    <ul>
+                        <li>Image Processing</li>
+                        <li>Machine Learning, Neural Networks, Data Science & Analytics</li>
+                        <li>Game Theory</li>
+                        <li>Project Management for Computer Science</li>
+                        <li>Databases</li>
+                        <li>Fault-Tolerant Systems</li>
+                        <li>Algorithms, other Computer Science Fundamentals</li>
+                    </ul>
+                </div>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        Activities
+                    </h4>
+                    <div>
+                        <h5 class="subtitle">Vice President & Welfare Officer, Warwick ABACUS</h5>
+                        <p>
+                            Warwick ABACUS (Association of British and Chinese University Students) is an inclusive
+                            society that aims to bring together the often disparate British and Chinese university
+                            communities through a variety of events that cater to a range of people.
+                        </p>
+                        <p>
+                            I helped the other officers plan and run events, and with seeking new sponsorships to grow
+                            our budget. The year ended with the ABACUS ball at a scenic country house hotel with dinner,
+                            drinks, live performances, a dance-floor and a fireworks show to end the night.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="subtitle">CS:GO Community Officer, Warwick Esports</h5>
+                        <p>
+                            I managed several CS:GO teams competing for Warwick in the two university leagues. I also
+                            helped run events, including a week-long tournament for several European universities with
+                            connections with Warwick.
+                        </p>
+                        <p>
+                            Wrote sponsorship pitch for and met with HyperX, a leading brand for gaming peripherals,
+                            helping us create a partnership covered in several esports publications and which paved the
+                            way for direct university funding through a £250,000 esports centre with permanent staff.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="education-logo-title">
+                    <img src="image/winchester-crest.png" alt="Winchester College crest"/>
+                    <h3 class="title">
+                        Winchester College
+                    </h3>
+                </div>
+                <h4 class="subtitle">
+                    Academic Scholarship & Music Exhibition, Sept '13 - July '18
+                </h4>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        Pre-Us
+                    </h4>
+                    A-level equivalent exams
+                    <ul>
+                        <li>Maths (D1/A*)</li>
+                        <li>Further Maths (D2/A*)</li>
+                        <li>Physics (D1/A*)</li>
+                        <li>Economics (D1/A*)</li>
+                    </ul>
+                </div>
+                <div class="subsubsection">
+                    <h4 class="title">
+                        Activities
+                    </h4>
+                    <p>
+                        Expedition society, prefect, front-desk cellist in Symphony Orchestra, football,
+                        community volunteering.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 id="hobbies" class="title">
+                Hobbies
+            </h2>
+            <div class="subsection">
+                <ul>
+                    <li><strong>Games:</strong> Elite Dangerous, Valorant, Age of Wonders 4, Civ 6</li>
+                    <li><strong>Walks:</strong> RSPB member, enjoy visiting their reserves</li>
+                    <li><strong>Music:</strong> Cello, Piano</li>
+                    <li><strong>Football:</strong> Ipswich Town season ticket holder, 5-a-side</li>
+                    <li><strong>Cars and Motorsport:</strong> Le Mans '23; Goodwood FoS '22, '23; Evo Magazine</li>
                 </ul>
-            </nav>
-            <section id="header-content">
-                <div class="header-left">
-                    <h3 class="subtitle">
-                        Software Developer at Softwire
-                    </h3>
-                    <p id="tagline">
-                        Cambridge-based full-stack software engineer, currently working on the Electoral Integrity
-                        Programme to develop the back-office side of the register-to-vote and adjacent services
-                        for the government.
-                    </p>
-                </div>
-                <img
-                        id="headshot-image"
-                        class="header-right"
-                        src="image/Ralf%20Leggett-5-half-size.jpg"
-                        alt="Headshot image of Ralf Leggett"
-                />
-            </section>
-        </header>
-        <main role="main">
-            <article>
-                <section>
-                    <h2 id="experience" class="title">
-                        Experience
-                    </h2>
-                    <div class="subsection">
-                        <div class="experience-logo-title">
-                            <img class="experience-logo" src="image/softwire-logo.svg" alt="Softwire" />
-                        </div>
-                        <h4 class="subtitle">
-                            Software Developer, July '23 - Present
-                        </h4>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                EIP ERO Portal, July '23 - Present
-                            </h4>
-                            <p>
-                                Part of the Electoral Integrity Program (EIP) working on the Register to Vote and Voter
-                                Authority Certificate services. Working on the back-office application for electoral
-                                registration offices to process applications. Currently expanding to allow for online
-                                postal and proxy vote applications. Using Kotlin, Javascript, React and Terraform.
-                            </p>
-                        </div>
-                        <h4 class="subtitle">
-                            Graduate Software Developer, Sept '22 - July '23
-                        </h4>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                EIP Citizen-Facing Services, Feb '23 - July '23
-                            </h4>
-                            <p>
-                                Part of the Electoral Integrity Program (EIP). Working on the citizen-facing website as
-                                well as services to process applications and forward them to the back-office
-                                application. Worked on expanding to allow for online postal and proxy vote applications.
-                                Using Javascript, Java, Scala and Terraform.
-                            </p>
-                        </div>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                COMPOR, Nov '22 - Feb '23
-                            </h4>
-                            <p>
-                                Worked with React on an HR tool tailored towards Romanian companies.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="subsection">
-                        <div class="experience-logo-title">
-                            <img src="image/bae-systems-logo.svg" alt="BAE Systems" />
-                        </div>
-                        <h4 class="subtitle">
-                            Software Engineering Intern, June '21 - Sept '21
-                        </h4>
-                        <p>
-                            Wrote a bespoke data visualisation tool to parse, process and display binary data gathered
-                            by an experimental high-altitude solar-powered drone with multiple sensors recording
-                            measurements over 30+ day flights multiple times a second. Used multiprocessing to reduce
-                            the parse and process time for the several gigabyte files to under 10 seconds.
-                        </p>
-                    </div>
-                </section>
-                <section>
-                    <h2 id="education" class="title">
-                        Education
-                    </h2>
-                    <div class=" subsection">
-                        <div class="education-logo-title">
-                            <img src="image/warwick-crest.jpg" alt="University of Warwick crest" />
-                            <h3 class="title">
-                                University of Warwick
-                            </h3>
-                        </div>
-                        <h4 class="subtitle">
-                            Computer Science MEng (1st), Oct '18 - July '22
-                        </h4>
-                        <div class="subsubsection">
-                            <h4 class="title">Masters Dissertation</h4>
-                            <h4 class="subtitle">Multi-Agent Reinforcement Learning for Search and Rescue</h4>
-                            <p>
-                                Led a team of 6 on an investigation over the course of the year into the utility of a
-                                variety of multi-agent reinforcement learning algorithms in the field of search and
-                                rescue. We developed a custom sandbox environment to model potential scenarios at a high
-                                level and worked with RLlib — a scalable deep reinforcement learning library — to
-                                trial a variety of disaster scenarios, using heterogeneous agent types with different
-                                abilities. We concluded that there is potential for these algorithms to guide agents at
-                                a high level on the tasks to carry out — exploration, search, rescue or recovery — but
-                                that control at a micro level will still likely require human intervention at a minimum.
-                            </p>
-                        </div>
-                        <div class="subsubsection">
-                            <h4 class="title">Dissertation</h4>
-                            <h4 class="subtitle">Trajectory Planning for Autonomous Racecars</h4>
-                            <p>
-                                Working with a small-scale wheeled robot, I used computer vision to detect the driveable
-                                surface, plan a trajectory and follow it. Due to issues with setting up a binocular
-                                vision system, I used monocular vision with planar transformations to carry this out.
-                            </p>
-                        </div>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                Modules
-                            </h4>
-                            Including:
-                            <ul>
-                                <li>Image Processing</li>
-                                <li>Machine Learning, Neural Networks, Data Science & Analytics</li>
-                                <li>Game Theory</li>
-                                <li>Project Management for Computer Science</li>
-                                <li>Databases</li>
-                                <li>Fault-Tolerant Systems</li>
-                                <li>Algorithms, other Computer Science Fundamentals</li>
-                            </ul>
-                        </div>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                Activities
-                            </h4>
-                            <div>
-                                <h5 class="subtitle">Vice President & Welfare Officer, Warwick ABACUS</h5>
-                                <p>
-                                Warwick ABACUS (Association of British and Chinese University Students) is an inclusive
-                                society that aims to bring together the often disparate British and Chinese university
-                                communities through a variety of events that cater to a range of people.
-                                </p>
-                                <p>
-                                I helped out the other officers with planning and running events, as well as with
-                                seeking new sponsorships to grow our budget. The year ended with our most extravagant
-                                event, the ABACUS ball, which took place in a country house hotel for dinner and drinks
-                                with live performances, a dance-floor and a fireworks show to end the night.
-                                </p>
-                            </div>
-                            <div>
-                                <h5 class="subtitle">CS:GO Community Officer, Warwick Esports</h5>
-                                <p>
-                                I managed the various CS:GO teams competing for Warwick in the two university leagues
-                                and helped run events, including a tournament that saw teams from several European
-                                universities with connections with Warwick compete over the course of a week.
-                                </p>
-                                <p>
-                                Also assisted with finding new sponsorships by writing a pitch to and meeting with
-                                HyperX, a leading brand for gaming peripherals, that culminated in a partnership that
-                                was covered in several esports publications and paved the way for the university to
-                                directly fund the society through a £250,000 investment into an esports centre with
-                                permanent staff.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="subsection">
-                        <div class="education-logo-title">
-                            <img src="image/winchester-crest.png" alt="Winchester College crest" />
-                            <h3 class="title">
-                                Winchester College
-                            </h3>
-                        </div>
-                        <h4 class="subtitle">
-                            Academic Scholarship & Music Exhibition, Sept '13 - July '18
-                        </h4>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                Pre-Us
-                            </h4>
-                            A-level equivalent exams
-                            <ul>
-                                <li>Maths (D1/A*)</li>
-                                <li>Further Maths (D2/A*)</li>
-                                <li>Physics (D1/A*)</li>
-                                <li>Economics (D1/A*)</li>
-                            </ul>
-                        </div>
-                        <div class="subsubsection">
-                            <h4 class="title">
-                                Activities
-                            </h4>
-                            <p>
-                                Expedition society, prefect, front-desk cellist in Symphony Orchestra, football,
-                                community volunteering.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2 id="hobbies" class="title">
-                        Hobbies
-                    </h2>
-                    <div class="subsection">
-                        <ul>
-                            <li><strong>Games:</strong> Age of Wonders 4, Valorant, Civ 6, CS:GO</li>
-                            <li><strong>Walks:</strong> RSPB member, enjoy visiting their reserves</li>
-                            <li><strong>Music:</strong> Cello, Piano</li>
-                            <li><strong>Football:</strong> Ipswich Town season ticket holder, 5-a-side</li>
-                            <li><strong>Cars and Motorsport:</strong> Le Mans '23; Goodwood FoS '22, '23; Evo Magazine</li>
-                        </ul>
-                        <p>
-                            Nascent hobbies include cycling, swimming and various craft activities, with cross-stitching
-                            being one that I have particularly enjoyed recently.
-                        </p>
-                        <p>
-                            Hobbies I'd like to find time to revitalise include astronomy and LEGO.
-                        </p>
-                    </div>
-                </section>
-            </article>
-            <aside>
-                <div class="subsection">
-                    <h3 class="title" id="links">
-                        Links
-                    </h3>
-                    <a
-                            class="social-link"
-                            href="https://uk.linkedin.com/in/ralf-leggett"
-                            target="_blank"
-                            referrerpolicy="no-referrer"
-                            aria-label="LinkedIn profile, opens in new tab"
-                    >
-                        <img class="social-logo" src="image/linkedin.png" alt="LinkedIn logo" />
-                        <p>LinkedIn</p>
-                    </a>
-                    <a
-                            class="social-link"
-                            href="https://github.com/ralfleggettsoftwire"
-                            target="_blank"
-                            referrerpolicy="no-referrer"
-                            aria-label="GitHub profile, opens in new tab"
-                    >
-                        <img class="social-logo" src="image/github.svg" alt="GitHub logo" />
-                        <p>GitHub</p>
-                    </a>
-                    <a
-                            class="social-link"
-                            href="https://twitter.com/RalfLeggett"
-                            target="_blank"
-                            referrerpolicy="no-referrer"
-                            aria-label="Twitter profile, opens in new tab"
-                    >
-                        <img class="social-logo" src="image/twitter.svg" alt="Twitter logo" />
-                        <p>Twitter</p>
-                    </a>
-                </div>
-                <div class="subsection">
-                    <h3 class="title">
-                        Languages, Technologies
-                    </h3>
-                    <p>
-                        Work and University have given me exposure to languages of all levels and paradigms. I'm
-                        confident in my ability to pick new ones up, as I have done many times before. The following
-                        are the ones I am most familiar with, or that I am using currently:
-                    </p>
-                    <ul>
-                        <li>Javascript, React</li>
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>Java, Kotlin</li>
-                        <li>Ruby</li>
-                        <li>AWS, Terraform</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3 class="title">
-                        Technical Interests
-                    </h3>
-                    <ul>
-                        <li>Image processing</li>
-                        <li>ML, including its wide-ranging ethical implications</li>
-                        <li>Robotics, driverless cars</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3 class="title">
-                        Contact
-                    </h3>
-                    <p>
-                        Please contact me through LinkedIn DMs
-                    </p>
-                </div>
-            </aside>
-        </main>
-    </body>
+                <p>
+                    Hobbies I'd like to find time to revitalise include astronomy and LEGO.
+                </p>
+            </div>
+        </section>
+    </article>
+    <aside>
+        <div class="subsection">
+            <h3 class="title" id="links">
+                Links
+            </h3>
+            <a
+                    class="social-link"
+                    href="https://uk.linkedin.com/in/ralf-leggett"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    aria-label="LinkedIn profile, opens in new tab"
+            >
+                <img class="social-logo" src="image/linkedin.png" alt="LinkedIn logo"/>
+                <p>LinkedIn</p>
+            </a>
+            <a
+                    class="social-link"
+                    href="https://github.com/ralfleggettsoftwire"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    aria-label="GitHub profile, opens in new tab"
+            >
+                <img class="social-logo" src="image/github.svg" alt="GitHub logo"/>
+                <p>GitHub</p>
+            </a>
+            <a
+                    class="social-link"
+                    href="https://twitter.com/RalfLeggett"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    aria-label="Twitter profile, opens in new tab"
+            >
+                <img class="social-logo" src="image/twitter.svg" alt="Twitter logo"/>
+                <p>Twitter</p>
+            </a>
+        </div>
+        <div class="subsection">
+            <h3 class="title">
+                Languages, Technologies
+            </h3>
+            <p>
+                Work and University have given me exposure to languages of all levels and paradigms. I'm
+                confident in my ability to pick new ones up, as I have done many times before. The following
+                are the ones I am most familiar with, or that I am using currently:
+            </p>
+            <ul>
+                <li>Javascript (Typescript), React</li>
+                <li>Java, Kotlin</li>
+                <li>AWS, Terraform</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Ruby</li>
+            </ul>
+        </div>
+        <div class="subsection">
+            <h3 class="title">
+                Technical Interests
+            </h3>
+            <ul>
+                <li>Image processing</li>
+                <li>ML, including its wide-ranging ethical implications</li>
+                <li>Robotics, driverless cars</li>
+            </ul>
+        </div>
+        <div class="subsection">
+            <h3 class="title">
+                Contact
+            </h3>
+            <p>
+                Please contact me through LinkedIn DMs.
+            </p>
+        </div>
+    </aside>
+</main>
+</body>
 </html>

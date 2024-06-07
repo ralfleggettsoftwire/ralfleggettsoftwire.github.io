@@ -199,4 +199,16 @@ article {
     .subsubsection {
         margin-bottom: 1em;
     }
+
+    .wordy-list > li {
+        margin-bottom: 0.5em;
+    }
+
+    .wordy-list > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+pre {
+    font-family: monospace;
 }

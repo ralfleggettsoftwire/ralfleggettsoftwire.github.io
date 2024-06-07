@@ -327,5 +327,15 @@ article .subsection {
 article .subsubsection {
   margin-bottom: 1em;
 }
+article .wordy-list > li {
+  margin-bottom: 0.5em;
+}
+article .wordy-list > li:last-child {
+  margin-bottom: 0;
+}
+
+pre {
+  font-family: monospace;
+}
 
 /*# sourceMappingURL=styles.css.map */
