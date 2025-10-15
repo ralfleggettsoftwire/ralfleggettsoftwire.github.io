@@ -191,7 +191,7 @@ main {
     margin-right: 2em;
   }
   aside {
-    flex-grow: 1;
+    max-width: 22%;
     padding: 0 2em;
     border-left: 1px solid black;
   }
@@ -215,8 +215,17 @@ main {
   font-style: italic;
 }
 
+.indent-1 {
+  margin-left: 1em;
+}
+
 a {
   text-decoration: none;
+}
+
+pre {
+  font-family: monospace;
+  text-wrap: auto;
 }
 
 #mobile-title {
@@ -332,10 +341,6 @@ article .wordy-list > li {
 }
 article .wordy-list > li:last-child {
   margin-bottom: 0;
-}
-
-pre {
-  font-family: monospace;
 }
 
 /*# sourceMappingURL=styles.css.map */
